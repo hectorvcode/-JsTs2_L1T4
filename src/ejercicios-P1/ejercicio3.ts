@@ -20,3 +20,6 @@ export async function getResultE3() {
   return result2
 }
 
+getResultE3().then((result) => {
+  console.log('ResultE3:', result)
+})
