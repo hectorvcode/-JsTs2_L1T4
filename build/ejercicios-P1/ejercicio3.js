@@ -64,5 +64,5 @@ function getResultE3() {
 }
 exports.getResultE3 = getResultE3;
 getResultE3().then(function (result) {
-    console.log('ResultE3:', result);
+    console.log('Result:', result); // log: 'Result: 3'
 });

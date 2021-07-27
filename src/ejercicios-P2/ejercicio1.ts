@@ -1,14 +1,16 @@
 /**
  * Reescribe los bloques de código para usar async/await
  */
-  
+
+/** Ejercicio 01 */
+
 const myPromise = new Promise((resolve) => {
     setTimeout(() => {
-    resolve('success')
+        resolve('success')
     }, 500)
 })
-      
-export async function getResultE1P2(){
-    const result = await myPromise;
-    console.log("This is a ", result);
+
+export async function resultE1P2(){
+    let result =  await myPromise
+    console.log("This is a " + result)
 }

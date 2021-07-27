@@ -39,13 +39,14 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
     }
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.getResultE1P2 = void 0;
+exports.resultE1P2 = void 0;
+/** Ejercicio 01 */
 var myPromise = new Promise(function (resolve) {
     setTimeout(function () {
         resolve('success');
     }, 500);
 });
-function getResultE1P2() {
+function resultE1P2() {
     return __awaiter(this, void 0, void 0, function () {
         var result;
         return __generator(this, function (_a) {
@@ -53,10 +54,10 @@ function getResultE1P2() {
                 case 0: return [4 /*yield*/, myPromise];
                 case 1:
                     result = _a.sent();
-                    console.log("This is a ", result);
+                    console.log("This is a " + result);
                     return [2 /*return*/];
             }
         });
     });
 }
-exports.getResultE1P2 = getResultE1P2;
+exports.resultE1P2 = resultE1P2;

@@ -2,21 +2,26 @@
  * Reescribe los bloques de código para usar async/await
  */
   
- const myPromise = new Promise((resolve, reject) => {
+/** Ejercicio 02 */
+
+const myPromise = new Promise<number>((resolve, reject) => {
+    let random = Math.random()
+    console.log("random number", random)
     setTimeout(() => {
-      if (Math.random() >= 0.5) {
-        resolve(1)
-      } else {
-        reject('An error has occurred')
-      }
+        if (random >= 0.5) {
+            resolve(1)
+        } else {
+            reject('An error has occurred')
+        }
     }, 500)
-  })
-  
-export async function getResultE2P2(result:Function){
-    try {
-        const resultado = await result;
-        console.log(resultado);
-      }catch (error){
-        console.log(error);
-      }
+})
+
+export async function resultE2P2(){
+    try{
+        let result =  await myPromise
+        console.log(result + 1)
+    }
+    catch(err){
+        console.log(err)
+    }
 }

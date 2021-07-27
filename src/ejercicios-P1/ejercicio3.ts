@@ -5,21 +5,18 @@
  */
 
 /**Ejercicio 3 */
-
 const myPromise =  new Promise<number>((success, reject) => {
-  setTimeout(() => {
-    success(1)
-  }, 1000)
+    setTimeout(() => {
+        success(1)
+    }, 1000)
 })
 
 export async function getResultE3() {
-  const result = await myPromise
- 
-  const result2 = result + 2
-
-  return result2
-}
+    const result = await myPromise
+    const result2 = result + 2
+    return result2
+    }
 
 getResultE3().then((result) => {
-  console.log('ResultE3:', result)
+    console.log('Result:', result) // log: 'Result: 3'
 })

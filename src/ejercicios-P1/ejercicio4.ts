@@ -5,17 +5,17 @@
  */
 
 /**Ejercicio 4 */
-const myPromise =  new Promise((success, reject) => {
-  setTimeout(() => {
-    reject('error!')
-  }, 1000)
+const myPromise =  new Promise<number>((success, reject) => {
+    setTimeout(() => {
+        reject('error!')
+    }, 1000)
 })
 
 export async function getResultE4() {
-  try {
-    const result = await myPromise 
-    console.log(result)
-  } catch(err) {
-    console.error(err)
-  }
-}
+    try {
+            const result = await myPromise
+            console.log(result)
+    } catch(err) {
+            console.error(err)
+        }
+    }

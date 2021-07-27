@@ -39,10 +39,13 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
     }
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.getResultE2P2 = void 0;
+exports.resultE2P2 = void 0;
+/** Ejercicio 02 */
 var myPromise = new Promise(function (resolve, reject) {
+    var random = Math.random();
+    console.log("random number", random);
     setTimeout(function () {
-        if (Math.random() >= 0.5) {
+        if (random >= 0.5) {
             resolve(1);
         }
         else {
@@ -50,25 +53,25 @@ var myPromise = new Promise(function (resolve, reject) {
         }
     }, 500);
 });
-function getResultE2P2(result) {
+function resultE2P2() {
     return __awaiter(this, void 0, void 0, function () {
-        var resultado, error_1;
+        var result, err_1;
         return __generator(this, function (_a) {
             switch (_a.label) {
                 case 0:
                     _a.trys.push([0, 2, , 3]);
-                    return [4 /*yield*/, result];
+                    return [4 /*yield*/, myPromise];
                 case 1:
-                    resultado = _a.sent();
-                    console.log(resultado);
+                    result = _a.sent();
+                    console.log(result + 1);
                     return [3 /*break*/, 3];
                 case 2:
-                    error_1 = _a.sent();
-                    console.log(error_1);
+                    err_1 = _a.sent();
+                    console.log(err_1);
                     return [3 /*break*/, 3];
                 case 3: return [2 /*return*/];
             }
         });
     });
 }
-exports.getResultE2P2 = getResultE2P2;
+exports.resultE2P2 = resultE2P2;

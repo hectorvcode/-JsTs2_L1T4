@@ -5,17 +5,16 @@
  */
 
 /**Ejercicio 2 */
-
 const myPromise =  new Promise<number>((success, reject) => {
     setTimeout(() => {
-      success(1)
+        success(1)
     }, 1000)
-  })
-  
-  export async function getResultE2() {
-    const result = await myPromise
-   
-    const result2 = result + 2
-  
-    console.log('Result:', result2) // log: 'Result: 3'
-  }
+})
+
+export async function getResultE2() {
+        const result = await myPromise
+        const result2 = result + 2
+        console.log('Result:', result2) // log: 'Result: 3'
+    }
+
+

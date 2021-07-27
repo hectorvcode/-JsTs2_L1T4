@@ -8,14 +8,11 @@
 
 const myPromise =  new Promise((res, rej) => {
     setTimeout(() => {
-      res('Success')
+        res('Success')
     }, 850)
-  })
-  
- export async function getResultE1() {
-    const result = await myPromise
-    
-    console.log('Result:', result) // log: 'Result: Success'
-  }
-  
+})
 
+export async function getResultE1() {
+    const result = await myPromise
+    console.log('Result:', result) // log: 'Result: Success'
+}
